@@ -78,7 +78,7 @@ self.onload = function() {
     let params = new URLSearchParams(window.location.search);
     let source = params.has("source") ? decodeURIComponent(params.get("source")) : initSource;
 
-    editor = monaco.editor.create(document.getElementById('container'), {
+    editor = monaco.editor.create(document.getElementById("editor"), {
         value: source,
         language: 'javascript',
         minimap: {

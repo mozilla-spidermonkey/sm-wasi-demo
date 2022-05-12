@@ -1,13 +1,69 @@
 <html>
 <head>
     <script src="js/main.js"></script>
+    <style type="text/css">
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            overflow-y: hidden;
+        }
+        #header {
+            background-color: #ddd;
+        }
+        h1 {
+            font-size: 18px;
+            margin: 3px;
+            padding: 0;
+        }
+        #main {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            width: 100vw;
+            height: 100vh;
+            max-height: 100vh;
+        }
+        #wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100%;
+            min-height: 0;
+            border-top: 1px solid #999;
+        }
+        #editor {
+            border-right: 1px solid #999;
+        }
+        #error {
+            color: red;
+        }
+        #outputwrapper {
+            overflow: scroll;
+        }
+        #error, #output {
+            margin: 0;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+            font-family: Menlo, Monaco, "Courier New", monospace;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    </style>
 </head>
 <body>
-    <button id="share">Copy URL</button><br>
-    <div id="container" style="width: 40%; height: 600px; border: 1px solid #ccc; float: left;"></div>
-    <div style="float: left; width: 40%; margin-left: 10px">
-        <pre id="error" style="color: red"></pre>
-        <pre id="output" style="word-break: break-word;"></pre>
+    <div id="main">
+        <div id="header">
+            <h1>SpiderMonkey WASI demo</h1>
+            <button id="share">Copy URL</button>
+        </div>
+        <div id="wrapper">
+            <div id="editor"></div>
+            <div id="outputwrapper">
+                <pre id="error"></pre>
+                <pre id="output"></pre>
+            </div>
+        </div>
     </div>
- </body>
+</body>
  </html>
