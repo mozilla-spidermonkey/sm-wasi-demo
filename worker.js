@@ -6,6 +6,10 @@ const wasmFilePath = '../js.wasm'
 const wasmFs = new WasmFs();
 let wasmModule = null;
 
+// Workaround for "process is not defined" exception in actualFill in
+// randomfill/browser.js that wasmer-js uses.
+self.process = {browser: true};
+
 async function run(source) {
     let isFirstRun = false;
     if (!wasmModule) {
@@ -40,7 +44,9 @@ async function run(source) {
 
     try {
         wasi.start(instance);
-    } catch (e) {}
+    } catch (e) {
+        console.error(e);
+    }
 
     let stdout = wasmFs.fs.readFileSync('/dev/stdout').toString();
     let stderr = wasmFs.fs.readFileSync('/dev/stderr').toString();
