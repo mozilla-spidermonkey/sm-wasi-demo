@@ -97,7 +97,7 @@ for (var [k, v] of Object.entries(groups)) {
 }`;
 
 self.onload = async function() {
-    let response = await fetch('/data.json');
+    let response = await fetch("data.json");
     let branches = await response.json();
     let select = document.getElementById("branch");
     for (let branch of branches) {
