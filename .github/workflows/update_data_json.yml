@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: gh-pages
+        ref: main
     - name: Setup Python
       uses: actions/setup-python@v1
       with:
@@ -24,6 +24,7 @@ jobs:
       run: python3 update_data_json.py
     - name: Add and commit files
       run: |
+        git switch gh-pages
         git add data.json
         set +e
         git diff --cached --quiet
