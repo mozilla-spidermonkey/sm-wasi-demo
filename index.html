@@ -49,6 +49,9 @@
             font-size: 12px;
             line-height: 18px;
         }
+        #build_info {
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
@@ -56,6 +59,8 @@
         <div id="header">
             <h1>SpiderMonkey WASI demo</h1>
             <button id="share">Copy URL</button>
+            Branch: <select id="branch"></select>
+            <span id="build_info"></span>
         </div>
         <div id="wrapper">
             <div id="editor"></div>

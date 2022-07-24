@@ -40,7 +40,11 @@ function executeCode() {
         };
     }
 
-    worker.postMessage({source});
+    let select = document.getElementById("branch");
+    let branch = self.branches.find(el => el.branch === select.value);
+    let wasm_url = branch.url;
+
+    worker.postMessage({source, wasm_url});
     workerLastSource = source;
     workerIsRunning = true;
 
@@ -50,7 +54,7 @@ function executeCode() {
         }
         setOutput("", "Timed out");
         worker.terminate();
-        workerIsRunning = false; 
+        workerIsRunning = false;
         worker = null;
         executeCode();
     }, 5000);
@@ -58,8 +62,26 @@ function executeCode() {
 
 function shareCode() {
     let url = window.location.href.split('?')[0];
-    url += "?source=" + encodeURIComponent(editor.getValue()); 
+    url += "?branch=" + document.getElementById("branch").value;
+    url += "&source=" + encodeURIComponent(editor.getValue());
     navigator.clipboard.writeText(url);
+}
+
+function showBuildInfo(name) {
+    let build = self.branches.find(el => el.branch === name);
+    let info = document.getElementById("build_info");
+    info.innerText = `build: ${build.buildid} (rev ${build.rev.substr(0, 6)})`;
+}
+
+function changeBranch() {
+    showBuildInfo(this.value);
+    if (worker) {
+        worker.terminate();
+    }
+    workerIsRunning = false;
+    worker = null;
+    workerLastSource = null;
+    executeCode();
 }
 
 const initSource = `print("Hello, world!");
@@ -74,9 +96,26 @@ for (var [k, v] of Object.entries(groups)) {
     print(k + ":\\t" + v);
 }`;
 
-self.onload = function() {
+self.onload = async function() {
+    let response = await fetch('/data.json');
+    let branches = await response.json();
+    let select = document.getElementById("branch");
+    for (let branch of branches) {
+        var option = document.createElement("option");
+        option.value = branch.branch;
+        option.text = branch.branch;
+        select.appendChild(option);
+    }
+
+    self.branches = branches;
+
     let params = new URLSearchParams(window.location.search);
     let source = params.has("source") ? decodeURIComponent(params.get("source")) : initSource;
+
+    if (params.has("branch")) {
+        let branch = params.get("branch");
+        select.value = branch;
+    }
 
     editor = monaco.editor.create(document.getElementById("editor"), {
         value: source,
@@ -93,6 +132,9 @@ self.onload = function() {
         executeCode();
     });
     executeCode();
+
+    showBuildInfo(select.value);
+    select.onchange = changeBranch;
 
     document.getElementById("share").onclick = shareCode;
 };

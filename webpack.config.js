@@ -31,7 +31,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: "./index.html", to: __dirname + "/dist" },
-        { from: "./js.wasm", to: __dirname + "/dist" },
+        { from: "./data.json", to: __dirname + "/dist" },
       ],
     }),
   ],

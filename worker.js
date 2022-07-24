@@ -2,7 +2,6 @@ import { WASI } from '@wasmer/wasi'
 import browserBindings from '@wasmer/wasi/lib/bindings/browser'
 import { WasmFs } from '@wasmer/wasmfs'
 
-const wasmFilePath = '../js.wasm'
 const wasmFs = new WasmFs();
 let wasmModule = null;
 
@@ -10,17 +9,17 @@ let wasmModule = null;
 // randomfill/browser.js that wasmer-js uses.
 self.process = {browser: true};
 
-async function run(source) {
+async function run(source, wasm_url) {
     let isFirstRun = false;
     if (!wasmModule) {
         isFirstRun = true;
         postMessage({status: "Downloading/Compiling Wasm module..."});
-        let response = fetch(wasmFilePath);
+        let response = fetch(wasm_url);
         wasmModule = await WebAssembly.compileStreaming(response);
     }
 
     let wasi = new WASI({
-        args: [wasmFilePath, "-f", "/input.js",
+        args: ["js.wasm", "-f", "/input.js",
                "--selfhosted-xdr-path=/selfhosted.bin",
                "--selfhosted-xdr-mode=" + (isFirstRun ? "encode" : "decode")],
         preopens: {'/': '/'},
@@ -54,6 +53,6 @@ async function run(source) {
 };
 
 self.onmessage = function(e) {
-    let source = e.data.source;
-    run(source);
+    let {source, wasm_url} = e.data;
+    run(source, wasm_url);
 };
