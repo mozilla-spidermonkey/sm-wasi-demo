@@ -24,7 +24,7 @@ jobs:
       run: python3 update_data_json.py
     - name: Add and commit files
       run: |
-        git add build/data.json
+        git add data.json
         set +e
         git diff --cached --quiet
         echo "##[set-output name=modified;]$?"
@@ -40,8 +40,12 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: main
+    - name: Build website
+      run: |
+        npm ci
+        npm run build
     - name: Deploy to gh-pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        folder: build
+        folder: dist
         branch: gh-pages

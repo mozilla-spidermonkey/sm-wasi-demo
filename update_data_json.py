@@ -45,7 +45,7 @@ def run():
 
     log(f"Writing data: {json.dumps(data)}")
 
-    with open("build/data.json", "w") as f:
+    with open("data.json", "w") as f:
         f.write(json.dumps(data, indent=1))
 
 run()
