@@ -1,6 +1,8 @@
 Online SpiderMonkey WASI shell
 ==============================
 
+Source code for https://mozilla-spidermonkey.github.io/sm-wasi-demo/
+
 Build Instructions
 ------------------
 1) Run `npm install` to fetch dependencies.
