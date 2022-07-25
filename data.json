@@ -16,5 +16,11 @@
   "url": "https://firefoxci.taskcluster-artifacts.net/NcupFg7HRAKD3q6KGnJ5KQ/0/public/build/js.wasm",
   "buildid": "20220718155818",
   "rev": "5c3227d2de55585def91bf8c3eb60794c3865b87"
+ },
+ {
+  "branch": "mozilla-esr102",
+  "url": "https://firefoxci.taskcluster-artifacts.net/Ytr11Z6lSKmCBSPbs3TYwg/0/public/build/js.wasm",
+  "buildid": "20220714171006",
+  "rev": "204247277dc85d2dc721c1af110f10020cd6a26c"
  }
 ]
