@@ -27,7 +27,7 @@ class TaskCluster:
 
 def run():
     job_name = "spidermonkey-sm-linux64-wasi/opt"
-    branches = ["mozilla-central", "mozilla-beta", "mozilla-release"]
+    branches = ["mozilla-central", "mozilla-beta", "mozilla-release", "mozilla-esr102"]
 
     data = []
     for branch in branches:
