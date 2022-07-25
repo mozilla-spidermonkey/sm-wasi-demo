@@ -43,10 +43,9 @@ def run():
         obj = {"branch": branch, "url": url, "buildid": target_json["buildid"], "rev": target_json["moz_source_stamp"]}
         data.append(obj)
 
-    json_data = json.dumps(data)
-    log(f"Writing data: {json_data}")
+    log(f"Writing data: {json.dumps(data)}")
 
     with open("build/data.json", "w") as f:
-        f.write(json_data)
+        f.write(json.dumps(data, indent=1))
 
 run()
