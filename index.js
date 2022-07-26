@@ -94,7 +94,8 @@ var groups = re.exec(new Date()).groups;
 
 for (var [k, v] of Object.entries(groups)) {
     print(k + ":\\t" + v);
-}`;
+}
+`;
 
 self.onload = async function() {
     let response = await fetch("data.json");
@@ -128,6 +129,12 @@ self.onload = async function() {
         scrollBeyondLastLine: false,
         theme: "vs-dark",
     });
+
+    // Move cursor to end and focus the editor.
+    let numLines = editor.getModel().getLineCount();
+    let col = editor.getModel().getLineMaxColumn(numLines);
+    editor.setPosition({lineNumber: numLines, column: col});
+    editor.focus();
 
     editor.onDidChangeModelContent(function(model) {
         executeCode();
