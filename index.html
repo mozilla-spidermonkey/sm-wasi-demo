@@ -14,7 +14,8 @@
             overflow-y: hidden;
         }
         #header {
-            background-color: #ddd;
+            background-color: #292929;
+            color: #eee;
         }
         h1 {
             font-size: 18px;
@@ -33,15 +34,18 @@
             grid-template-columns: 1fr 1fr;
             height: 100%;
             min-height: 0;
-            border-top: 1px solid #999;
         }
         #editor {
-            border-right: 1px solid #999;
+            border-right: 1px solid #333;
         }
         #error {
             color: red;
         }
+        #output {
+            color: #D4D4D4;
+        }
         #outputwrapper {
+            background-color: #1e1e1e;
             overflow: scroll;
         }
         #error, #output {
@@ -55,6 +59,14 @@
         #build_info {
             font-size: 12px;
         }
+        button {
+            margin: 5px;
+        }
+        button, select {
+            background-color: #444;
+            color: white;
+            border: 1px solid #555;
+        }
     </style>
 </head>
 <body>
@@ -62,7 +74,7 @@
         <div id="header">
             <h1>SpiderMonkey WASI demo</h1>
             <button id="share">Copy URL</button>
-            Branch: <select id="branch"></select>
+            branch: <select id="branch"></select>
             <span id="build_info"></span>
         </div>
         <div id="wrapper">

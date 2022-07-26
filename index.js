@@ -119,13 +119,14 @@ self.onload = async function() {
 
     editor = monaco.editor.create(document.getElementById("editor"), {
         value: source,
-        language: 'javascript',
+        language: "javascript",
         minimap: {
             enabled: false
         },
         hideCursorInOverviewRuler: true,
         scrollbar: {vertical: "auto"},
         scrollBeyondLastLine: false,
+        theme: "vs-dark",
     });
 
     editor.onDidChangeModelContent(function(model) {
