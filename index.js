@@ -84,17 +84,23 @@ function changeBranch() {
     executeCode();
 }
 
-const initSource = `print("Hello, world!");
-print("-".repeat(13));
+const initSource = `// Welcome to the SpiderMonkey JS shell compiled to WebAssembly!
+//
+// JS code on this side is evaluated in a Web Worker as you type.
+// The output is printed on the right-hand side.
+//
+// The JS shell has various builtin functions for testing purposes.
+// help() will print a list of them.
 
-// help();
+print("Hello, world!");
+print("=".repeat(13));
 
-var re = /(?<wday>\\w{3}) (?<month>\\w{3}) (?<day>\\d+)/;
-var groups = re.exec(new Date()).groups;
+let re = /(?<wday>\\w{3}) (?<month>\\w{3}) (?<day>\\d+)/;
+let groups = re.exec(new Date()).groups;
+print(\`Today is \${groups.wday}, \${groups.month} \${groups.day}.\`);
 
-for (var [k, v] of Object.entries(groups)) {
-    print(k + ":\\t" + v);
-}
+print();
+print("2 ** 128 =", 2n ** 128n);
 `;
 
 self.onload = async function() {

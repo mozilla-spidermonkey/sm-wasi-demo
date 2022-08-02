@@ -17,6 +17,13 @@
             background-color: #292929;
             color: #eee;
         }
+        #header a {
+            color: inherit;
+            text-decoration: none;
+        }
+        #header a:hover {
+            color: #888;
+        }
         h1 {
             font-size: 18px;
             margin: 3px;
@@ -72,7 +79,7 @@
 <body>
     <div id="main">
         <div id="header">
-            <h1>SpiderMonkey WASI demo</h1>
+            <h1><a href="https://spidermonkey.dev">SpiderMonkey</a> <a href="https://wasi.dev">WASI</a> demo</h1>
             <button id="share">Copy URL</button>
             branch: <select id="branch"></select>
             <span id="build_info"></span>
