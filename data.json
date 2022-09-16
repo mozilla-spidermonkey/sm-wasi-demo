@@ -1,9 +1,9 @@
 [
  {
   "branch": "mozilla-central",
-  "url": "https://firefoxci.taskcluster-artifacts.net/VjhrYQ39SCqcTCVmgTzZbw/0/public/build/js.wasm",
-  "buildid": "20220915094451",
-  "rev": "ae27c51dc6ca9a3253710783c1807b795ae02909"
+  "url": "https://firefoxci.taskcluster-artifacts.net/aeyqtDs9RNmRl9n1R0KHFQ/0/public/build/js.wasm",
+  "buildid": "20220916033628",
+  "rev": "b7a5205832b471367bad42b69cdf69a4da1eb15c"
  },
  {
   "branch": "mozilla-beta",
