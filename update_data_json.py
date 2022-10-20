@@ -1,3 +1,4 @@
+import gzip
 import json
 import sys
 import urllib.request
@@ -22,8 +23,12 @@ class TaskCluster:
     @classmethod
     def get_json(cls, route, artifact):
         url = cls.url(route, artifact)
+        log(f"JSON URL: {url}")
         with urllib.request.urlopen(url) as u:
-            return json.loads(u.read())
+            data = u.read()
+            if u.headers["Content-Encoding"] == "gzip":
+                data = gzip.decompress(data)
+            return json.loads(data)
 
 def run():
     job_name = "spidermonkey-sm-linux64-wasi/opt"
