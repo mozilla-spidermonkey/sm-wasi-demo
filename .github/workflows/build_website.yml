@@ -27,7 +27,7 @@ jobs:
         git add data.json
         set +e
         git diff --cached --quiet
-        echo "##[set-output name=modified;]$?"
+        echo "modified=$?" >> $GITHUB_OUTPUT
         set -e
       id: status_add
     - name: Commit files
