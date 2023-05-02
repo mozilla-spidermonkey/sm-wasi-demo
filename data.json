@@ -13,9 +13,9 @@
  },
  {
   "branch": "mozilla-release",
-  "url": "https://firefoxci.taskcluster-artifacts.net/NjXqnNOuQomFwFF5Hq7kqw/0/public/build/js.wasm",
-  "buildid": "20230405182649",
-  "rev": "566eef64df10aa14d23f383cdd171a031f8e7d73"
+  "url": "https://firefoxci.taskcluster-artifacts.net/TJwUca5YQyq3tRfU-2MOiw/0/public/build/js.wasm",
+  "buildid": "20230501151611",
+  "rev": "31d1ac448827fce3081a5092beb050fb322049ec"
  },
  {
   "branch": "mozilla-esr102",
