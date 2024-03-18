@@ -7,9 +7,9 @@
  },
  {
   "branch": "mozilla-beta",
-  "url": "https://firefoxci.taskcluster-artifacts.net/KSaZYsq-Sqy-S0WtyY5v-Q/0/public/build/js.wasm",
-  "buildid": "20240309155907",
-  "rev": "924d3c88edc8fc8b046daeaec78c45bafa710bcb"
+  "url": "https://firefoxci.taskcluster-artifacts.net/XdoKsd40SUqTRSYlECqEJw/0/public/build/js.wasm",
+  "buildid": "20240318085508",
+  "rev": "566939372e5a2716a9508a1acde76dc7c4a2511d"
  },
  {
   "branch": "mozilla-release",
