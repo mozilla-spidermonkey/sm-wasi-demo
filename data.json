@@ -1,15 +1,15 @@
 [
  {
   "branch": "mozilla-central",
-  "url": "https://firefoxci.taskcluster-artifacts.net/Axn1UBTxRuqF_z5CuhFtZA/0/public/build/js.wasm",
-  "buildid": "20240430210627",
-  "rev": "8f7500d7e530d9db7e5101922db97ea633705f4e"
+  "url": "https://firefoxci.taskcluster-artifacts.net/PCOmzhqLQ0mJfjTOClqWhA/0/public/build/js.wasm",
+  "buildid": "20240502091633",
+  "rev": "dda5d5286866494223d6cc52382d52032d961218"
  },
  {
   "branch": "mozilla-beta",
-  "url": "https://firefoxci.taskcluster-artifacts.net/ZAmTc8xKTXipCdr2AIXmMg/0/public/build/js.wasm",
-  "buildid": "20240430182340",
-  "rev": "c6a65c83aca8548bf9deaa95222c9a6eeeae0b42"
+  "url": "https://firefoxci.taskcluster-artifacts.net/aea1UTn7T26s2dJ-9b9YFA/0/public/build/js.wasm",
+  "buildid": "20240501222611",
+  "rev": "6bfc20d1c1c8221fc612a4669b7fc1c27efc793e"
  },
  {
   "branch": "mozilla-release",
