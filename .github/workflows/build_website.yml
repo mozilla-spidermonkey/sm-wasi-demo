@@ -18,8 +18,8 @@ jobs:
         python-version: "3.x"
     - name: Setup Git Profile
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
     - name: Update data.json
       run: python3 update_data_json.py
     - name: Add and commit files
