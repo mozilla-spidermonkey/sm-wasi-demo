@@ -1,32 +1,32 @@
 [
  {
   "branch": "mozilla-central",
-  "url": "https://firefoxci.taskcluster-artifacts.net/UALu5WfuQ1mAo1dJW3V5Vg/0/public/build/js.wasm",
-  "buildid": "20250720210720",
-  "rev": "cfd0090968e11deee3db2fd88b291a9f16dd1fda"
+  "url": "https://firefoxci.taskcluster-artifacts.net/QTE0zL3bRNmf8JlOBxI-eg/0/public/build/js.wasm",
+  "buildid": "20250722042657",
+  "rev": "09ffd71305bc75087bd683ad9b50a765a69862ea"
  },
  {
   "branch": "mozilla-beta",
-  "url": "https://firefoxci.taskcluster-artifacts.net/Hq4HQywuRQm-y9aTU9xR8w/0/public/build/js.wasm",
-  "buildid": "20250713235603",
-  "rev": "014b9c2ac567aac065ce4f9835ca65a64889cd25"
+  "url": "https://firefoxci.taskcluster-artifacts.net/dctT1TWURiC-JIAO3Jn0bg/0/public/build/js.wasm",
+  "buildid": "20250721133827",
+  "rev": "c477f2a1b3849be8dbc069e8b656305a14031fbf"
  },
  {
   "branch": "mozilla-release",
-  "url": "https://firefoxci.taskcluster-artifacts.net/VaQHXRSrSwazpGQ8AoczuQ/0/public/build/js.wasm",
-  "buildid": "20250714153642",
-  "rev": "59119f1b2397c86749f81313b43a5fb5f250d40b"
+  "url": "https://firefoxci.taskcluster-artifacts.net/azfVft7TRre44z-TQZv2Pg/0/public/build/js.wasm",
+  "buildid": "20250721182752",
+  "rev": "4056eb7c7f2fedf231f060874046b49b79662301"
  },
  {
   "branch": "mozilla-esr115",
-  "url": "https://firefoxci.taskcluster-artifacts.net/B3djd5z9RBayEPqDvgglOw/0/public/build/js.wasm",
-  "buildid": "20250711184235",
-  "rev": "e729400ad6743bdd08354161fc2d89e346d9851d"
+  "url": "https://firefoxci.taskcluster-artifacts.net/NHdvirnzR2CBklIctj8AKg/0/public/build/js.wasm",
+  "buildid": "20250721135425",
+  "rev": "25efe6e8098005b4a88b0e3338d332b2345520af"
  },
  {
   "branch": "mozilla-esr128",
-  "url": "https://firefoxci.taskcluster-artifacts.net/QXG0C30zT0q_VPYDN66ARA/0/public/build/js.wasm",
-  "buildid": "20250710162900",
-  "rev": "4bdc152586ef5ef8645e13faffe0513f09f17fdd"
+  "url": "https://firefoxci.taskcluster-artifacts.net/MFxNhL0AQA2Vc7pkuu2bGQ/0/public/build/js.wasm",
+  "buildid": "20250721135543",
+  "rev": "04ed30bc2b73e6218ed6669d84efd12583bf2efa"
  }
 ]
