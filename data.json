@@ -19,8 +19,8 @@
  },
  {
   "branch": "mozilla-esr140",
-  "url": "https://firefoxci.taskcluster-artifacts.net/LiFsl0_dQjOSzU_CmORQPA/0/public/build/js.wasm",
-  "buildid": "20260615164122",
-  "rev": "73cfb327ae5565b068cd3a3bf4d37cf1ece35c7e"
+  "url": "https://firefoxci.taskcluster-artifacts.net/dCA-C69xQ3aMWulFTo_zGA/0/public/build/js.wasm",
+  "buildid": "20260616211152",
+  "rev": "823a1927e783176f4ce8369598f2e1e8caa0a404"
  }
 ]
