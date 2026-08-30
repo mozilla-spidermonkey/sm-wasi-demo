@@ -28,5 +28,8 @@
     "@wasmer/wasmfs": "^0.12.0",
     "monaco-editor": "^0.34.1",
     "monaco-editor-webpack-plugin": "^7.0.1"
+  },
+  "overrides": {
+    "serialize-javascript": "7.0.5"
   }
 }
